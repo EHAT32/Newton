@@ -17,6 +17,9 @@ def locate_root(x_l, x_r, dx_l, dx_r):
     while first_eq(x_l) * first_eq(x_r) > 0:
         x_l += dx_l
         x_r += dx_r
+        if x_l < -1:
+            print('No roots for x below 0')
+            break
     return x_l, x_r
 
 #Newton's method to find roots of the equation
